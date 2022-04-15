@@ -15,7 +15,8 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        const result = await knex('reservation').insert([{ number_of_guests: req.body.number_of_guests, meal_id: req.body.meal_id, created_date: req.body.created_date, contact_phonenumber: req.body.phonenumber, contact_name: req.body.name, contact_email: req.body.email }]);
+        console.log('req.path');
+        const result = await knex('reservation').insert([{ number_of_guests: req.body.number_of_guests, meal_id: req.body.meal_id, created_date: req.body.created_date, contact_phonenumber: req.body.contact_phonenumber, contact_name: req.body.contact_name, contact_email: req.body.contact_email }]);
         res.json(result);
     } catch (error) {
         throw error;
