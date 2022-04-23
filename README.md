@@ -32,7 +32,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Link to deployed website: 
+Link to deployed website: https://negar-meal-sharing.herokuapp.com/
 
 This project will be built out over 3 different classes:
 

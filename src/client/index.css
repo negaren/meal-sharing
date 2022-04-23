@@ -6,17 +6,17 @@
 }
 
 #root {
-  padding-left: 30%;
-  padding-right: 30%;
+  padding-left: 0%;
+  padding-right: 0%;
   height: 100vh;
 }
 
 body {
   margin: 0;
-  font-size: 17px;
+  /* font-size: 17px; */
 }
 
-ul {
+/* ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -25,7 +25,7 @@ ul {
 a {
   text-decoration: none;
   color: #2d3233;
-}
+} */
 
 button {
   background-color: #3e99c0;
@@ -39,8 +39,8 @@ button {
 
 @media screen and (max-width: 1400px) {
   #root {
-    padding-left: 30%;
-    padding-right: 30%;
+    padding-left: 0%;
+    padding-right: 0%;
   }
 }
 

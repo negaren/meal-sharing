@@ -1,0 +1,17 @@
+.mp-header {
+    background-color: rgb(92, 71, 99);
+    width:100%;
+    /* height: 10vh; */
+    text-align: center;
+    float: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.slogan {
+    font-weight: bolder;
+    color: rgb(195, 203, 203);
+}
+.brand-name {
+    color: rgb(216, 186, 14);
+}
