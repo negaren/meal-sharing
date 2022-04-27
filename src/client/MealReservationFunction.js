@@ -62,11 +62,22 @@ const MealReservationFunction = () => {
 
 
   function handleChangeName(event) {
+    console.log(typeof event.target.value);
+    if(typeof event.target.value == 'string') {
+      setReservationDetails({
+        ...reservationDetails,
+        contact_name: event.target.value,
+        meal_id: id,
+      });
+    }
+    else {
+      alert('Data entry is not valid')
     setReservationDetails({
       ...reservationDetails,
-      contact_name: event.target.value,
+      contact_name: '',
       meal_id: id,
     });
+    }
   }
 
   function handleChangeEmail(event) {

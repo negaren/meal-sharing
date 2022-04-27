@@ -10,13 +10,13 @@ const Footer = () => {
             <div className="footer-left">
           <image src="img/logo.png" />
 				<p className="footer-links">
-					<a href="#">Home</a>
+					<a href="#" className="footer-links">Home</a>
 					|
-					<a href="#">Blog</a>
+					<a href="#" className="footer-links">Blog</a>
 					|
-					<a href="#">About</a>
+					<a href="#" className="footer-links">About</a>
 					|
-					<a href="#">Contact</a>
+					<a href="#" className="footer-links">Contact</a>
 				</p>
 
 				<p className="footer-company-name">© 2019 Negar HYF Solutions :p </p>
@@ -35,7 +35,7 @@ const Footer = () => {
 				</div>
 				<div>
 					<i className="fa fa-envelope"></i>
-					<p><a href="mailto:negar.en@gmail.com">negar.en@gmail.com</a></p>
+					<p><a href="mailto:negar.en@gmail.com" className="footer-links">negar.en@gmail.com</a></p>
 				</div>
 			</div>
 			<div className="footer-right">

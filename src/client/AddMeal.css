@@ -1,0 +1,13 @@
+.add-meal p, label {
+    color: rgb(79, 71, 71);
+}
+
+button {
+    background-color: rgb(109, 85, 117);
+    margin: 10px;
+
+}
+
+.add-meal {
+    text-align: center;
+}

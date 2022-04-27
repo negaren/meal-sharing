@@ -1,9 +1,9 @@
 import React from "react";
 import "./MealContainer.css";
 
-const MealContainer = ({ title, description, maxReservation, price }) => {
+const MealContainer = ({ title, description, maxReservation, price, id }) => {
   return (
-    <div className="meal-container">
+    <a href={`http://localhost:3000/meals/${id}`} target="_blank" className="meal-links"><div className="meal-container">
         <p className="title">{title}</p>
         <p>{description}</p>
         <p>
@@ -12,7 +12,7 @@ const MealContainer = ({ title, description, maxReservation, price }) => {
         <p>
           <span className="title">Price:</span> {price}
         </p>
-    </div>
+        </div></a>
   );
 };
 

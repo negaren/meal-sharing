@@ -32,6 +32,7 @@ const MealFunction = () => {
               description={items.description}
               maxReservation={items.max_reservations}
               price={items.price}
+              id={items.id}
             />
           );
         })}

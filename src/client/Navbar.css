@@ -17,11 +17,15 @@
     align-items: center;
 }
 
-a {
+.navbar-links {
     text-decoration: none;
     color: azure;
 }
 
 a:hover {
     color: rgb(216, 186, 14);
+}
+
+a {
+    text-decoration: none;
 }

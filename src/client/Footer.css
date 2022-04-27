@@ -3,6 +3,11 @@
     /* height: 10%; */
 }
 
+.footer-links{
+	color: azure;
+}
+
+
 footer{
 	position: fixed;
 	bottom: 0;
@@ -65,7 +70,7 @@ footer{
 	display:inline-block;
 	line-height: 1.8;
 	text-decoration: none;
-	color:  inherit;
+	/* color:  inherit; */
 }
 
 .footer-distributed .footer-company-name{

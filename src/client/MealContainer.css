@@ -14,11 +14,16 @@
 }
 
 .meal-container {
-    border: 2px solid rgb(68, 69, 90);;
+    border: 2px solid rgb(68, 69, 90);
     border-radius: 2%;
     padding: 2%;
     margin-bottom: 2%;
     width: 250px;
     height: 250px;
     overflow: auto;
+}
+
+a{
+    color: rgb(68, 69, 90);
+    text-decoration: none;
 }
