@@ -19,7 +19,7 @@ const AddMeal = () => {
   const [message, setMessage] = useState("");
 
   const postData = () => {
-    fetch("http://localhost:3000/api/meals", {
+    fetch("api/meals", {
       method: "POST",
       headers: {
         "content-type": "application/json",

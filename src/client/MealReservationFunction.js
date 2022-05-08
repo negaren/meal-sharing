@@ -28,7 +28,7 @@ const MealReservationFunction = () => {
 
   async function fetchAvailableMeas() {
     return fetch(
-      "http://localhost:3000/api/meals?availableReservations=true"
+      "api/meals?availableReservations=true"
     ).then(response => {return response.json()})
   }
 
@@ -39,7 +39,7 @@ const MealReservationFunction = () => {
   }
 
   async function fetchUrl() {
-    return fetch(`http://localhost:3000/api/meals/${id}`).then((response) => {
+    return fetch(`api/meals/${id}`).then((response) => {
       if (!response.ok) {
         throw Error("Could not find the meal");
       }
@@ -101,7 +101,7 @@ const MealReservationFunction = () => {
   }
 
   const postData = () => {
-    fetch("http://localhost:3000/api/reservations", {
+    fetch("api/reservations", {
       method: "POST",
       headers: {
         "content-type": "application/json",
