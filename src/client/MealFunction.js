@@ -6,7 +6,7 @@ const MealFunction = () => {
   const [fetchedData, setFetchedData] = useState([]);
 
   async function fetchUrl() {
-    const response = await fetch("http://localhost:3000/api/meals");
+    const response = await fetch("api/meals");
     return await response.json();
   }
 
