@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 const AvailableReservations = () => {
 
     async function fetchUrl() {
-        return fetch(`http://localhost:3000/api/meals/?availablereservations=true`).then((response) => {
+        return fetch(`api/meals/?availablereservations=true`).then((response) => {
           if (!response.ok) {
             throw Error("Could not find the meal");
           }
