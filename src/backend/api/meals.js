@@ -19,7 +19,8 @@ router.get("/", async (request, response) => {
         const text = meal.title.toLowerCase()
         return text.includes(title)})
     }
-    if (createdAfter !== new Date(1991, 5, 3)){
+    
+    if (createdAfter.toDateString() !== new Date(1991, 5, 3).toDateString()){
       result = result.filter(meal => (meal.created_date > createdAfter))
     }
     if (limit != Number.MAX_VALUE) {
