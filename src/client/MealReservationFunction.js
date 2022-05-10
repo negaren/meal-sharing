@@ -95,7 +95,7 @@ const MealReservationFunction = () => {
   }
 
   function handleClick() {
-    postData();
+    postData(reservationDetails);
     alert(reservationMessage);
   }
 

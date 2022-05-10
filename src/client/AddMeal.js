@@ -18,7 +18,7 @@ const AddMeal = () => {
   });
   const [message, setMessage] = useState("");
 
-  const postData = () => {
+  const postData = (mealData) => {
     fetch("api/meals", {
       method: "POST",
       headers: {
@@ -84,7 +84,7 @@ const AddMeal = () => {
         regex.test(mealData.location.toLocaleLowerCase()) 
       ) {
         setMessage("Your meal is ready to be shared");
-        postData();
+        postData(mealData);
         allert(message)
       }
       else{ 
