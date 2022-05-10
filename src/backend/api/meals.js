@@ -5,6 +5,9 @@ const knex = require("../database");
 
 router.get("/", async (request, response) => {
   
+  response.json('Test')
+  return;
+
     const { maxPrice, availableReservations, title, createdAfter, limit } = unpackParams(request); // This step will throw if any params are invalid
     const reservations = await knex('reservation').select('*')
 

@@ -3,7 +3,7 @@ import "./MealContainer.css";
 
 const MealContainer = ({ title, description, maxReservation, price, id }) => {
   return (
-    <a href={`/meals/${id}`} target="_blank" className="meal-links"><div className="meal-container">
+    <a href={`api/meals/${id}`} target="_blank" className="meal-links"><div className="meal-container">
         <p className="title">{title}</p>
         <p>{description}</p>
         <p>
