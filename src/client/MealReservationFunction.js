@@ -95,12 +95,11 @@ const MealReservationFunction = () => {
   }
 
   function handleClick() {
-    console.log(reservationMessage);
     postData();
     alert(reservationMessage);
   }
 
-  const postData = () => {
+  const postData = (reservationDetails) => {
     fetch("api/reservations", {
       method: "POST",
       headers: {
