@@ -5,10 +5,6 @@ const knex = require("../database");
 
 router.get('/', async (req, res) => {
     try {
-
-        response.json('Test')
-        return;
-
         const reservation = await knex('reservation').select('*');
         res.json(reservation);
     } catch (error) {
