@@ -10,11 +10,9 @@ router.get("/", async (request, response) => {
 
     let result = await knex('meal').select('*')
 
-    response.json(result)
-    return;
-
     if (maxPrice != Number.MAX_VALUE) {
-      result = await knex('meal').select('*').where('price', '<', maxPrice)
+      result = result.filter((meal) => meal.price < maxPrice)
+      //  await knex('meal').select('*').where('price', '<', maxPrice)
     }
     if (title.length !== 0) {
       result = result.filter(meal => {
@@ -35,7 +33,7 @@ router.get("/", async (request, response) => {
         });
     }
     
-    // response.json(result)
+    response.json(result)
 
 });
 
