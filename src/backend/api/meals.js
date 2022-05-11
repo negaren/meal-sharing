@@ -96,11 +96,14 @@ function unpackParams(request) {
 
 router.post("/", async (req, res) => {
   try {
-    const result = await knex("meal").insert([{ title: req.body.title, description: req.body.description, location: req.body.location, when: req.body.when, max_reservations: req.body.max_reservations, price: req.body.price, created_date: req.body.created_date }])
-    res.json(result);
+    const result = await knex("meal").insert({ title: req.body.title, description: req.body.description, location: req.body.location, when: req.body.when, max_reservations: req.body.max_reservations, price: req.body.price, created_date: req.body.created_date })
+    console.log(result);
+    res.json(result); 
+    
   } catch (error) {
     console.log(error);
-    throw error
+    // throw error
+    res.send('error')
   }
 });
 

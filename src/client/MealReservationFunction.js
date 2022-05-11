@@ -94,7 +94,8 @@ const MealReservationFunction = () => {
     });
   }
 
-  function handleClick() {
+  function handleClick(e) {
+    e.preventDefault();
     postData(reservationDetails);
     alert(reservationMessage);
   }

@@ -18,29 +18,27 @@ const AddMeal = () => {
   });
   const [message, setMessage] = useState("");
 
-  const postData = (mealData) => {
-    fetch("api/meals", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(mealData),
-    })
+  const postData = async (mealData) => {
+    var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+    try {
+      await fetch("api/meals", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(mealData)
+      })
       .then((response) => {
-        response.json();
+        response.json()
         if (!response.ok) {
           throw Error("Something is went wrong");
         }
         setMessage("Your meal is ready to be shared");
       })
-      .then((data) => {
-        console.log(data);
-        setMessage("Your meal is ready to be shared");
-      })
-      .catch((error) => {
-        console.log(error);
-        setMessage(error.message);
-      });
+    } catch (error) {
+      setMessage(error.message);
+    }
   };
 
   function titleHandler(event) {
@@ -68,7 +66,8 @@ const AddMeal = () => {
     setmealData({ ...mealData, price: event.target.value });
   }
 
-  function clickHandler() {
+  async function clickHandler(e) {
+    e.preventDefault();
     if (
       mealData.title.length !== 0 &&
       mealData.description.length !== 0 &&
@@ -83,9 +82,7 @@ const AddMeal = () => {
         regex.test(mealData.description.toLocaleLowerCase()) &&
         regex.test(mealData.location.toLocaleLowerCase()) 
       ) {
-        setMessage("Your meal is ready to be shared");
-        postData(mealData);
-        allert(message)
+        await postData(mealData);
       }
       else{ 
           console.log( regex.test(mealData.title.toLocaleLowerCase()));

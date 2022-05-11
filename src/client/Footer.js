@@ -8,7 +8,6 @@ const Footer = () => {
                 <p>hi</p>
             </div> */}
             <div className="footer-left">
-          <image src="img/logo.png" />
 				<p className="footer-links">
 					<a href="#" className="footer-links">Home</a>
 					|
