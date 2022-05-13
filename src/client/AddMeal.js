@@ -19,8 +19,6 @@ const AddMeal = () => {
   const [message, setMessage] = useState("");
 
   const postData = async (mealData) => {
-    var myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
     try {
       await fetch("api/meals", {
         method: "POST",

@@ -103,7 +103,7 @@ router.post("/", async (req, res) => {
   } catch (error) {
     console.log(error);
     // throw error
-    res.send('error')
+    res.send(error)
   }
 });
 
