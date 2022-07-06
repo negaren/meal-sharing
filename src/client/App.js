@@ -1,21 +1,28 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, useParams } from "react-router-dom";
+import AddMeal from "./AddMeal";
 import TestComponent from "./components/TestComponent/TestComponent";
+import MainPage from "./MainPage";
+import MealReservationFunction from "./MealReservationFunction"
 
-function App() {
+export default function App() {
+
   return (
     <Router>
       <Route exact path="/">
-        <p>test</p>
+        <MainPage />
       </Route>
-      <Route exact path="/lol">
-        <p>lol</p>
+      <Route path="/share-meal" children={<AddMeal/>}>
+      </Route>
+      <Route path="/meals/:id" children={<MealReservationFunction />} >  
       </Route>
       <Route exact path="/test-component">
         <TestComponent></TestComponent>
       </Route>
-    </Router>
+    </Router>  
   );
 }
+// export default App;
 
-export default App;
+
+

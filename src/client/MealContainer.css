@@ -1,0 +1,29 @@
+.title {
+    font-weight:900;
+    color: rgb(216, 186, 14);
+}
+
+.meals-container {
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    align-content: center;
+}
+
+.meal-container {
+    border: 2px solid rgb(68, 69, 90);
+    border-radius: 2%;
+    padding: 2%;
+    margin-bottom: 2%;
+    width: 250px;
+    height: 250px;
+    overflow: auto;
+}
+
+a{
+    color: rgb(68, 69, 90);
+    text-decoration: none;
+}

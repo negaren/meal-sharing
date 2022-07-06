@@ -1,0 +1,24 @@
+.meal-title {
+    color: rgb(216, 186, 14);
+}
+.meal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.meal-desc {
+    color: darkgray;
+    font-weight:lighter;
+}
+
+div.meal-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin: 10px;
+}
+div {
+    margin: 10px;
+}

@@ -4,21 +4,23 @@ const router = express.Router();
 const knex = require("../database");
 
 router.get("/", async (request, response) => {
-  
+
     const { maxPrice, availableReservations, title, createdAfter, limit } = unpackParams(request); // This step will throw if any params are invalid
     const reservations = await knex('reservation').select('*')
 
     let result = await knex('meal').select('*')
 
     if (maxPrice != Number.MAX_VALUE) {
-      result = await knex('meal').select('*').where('price', '<', maxPrice)
+      result = result.filter((meal) => meal.price < maxPrice)
+      //  await knex('meal').select('*').where('price', '<', maxPrice)
     }
     if (title.length !== 0) {
       result = result.filter(meal => {
         const text = meal.title.toLowerCase()
         return text.includes(title)})
     }
-    if (createdAfter !== new Date(1991, 5, 3)){
+    
+    if (createdAfter.toDateString() !== new Date(1991, 5, 3).toDateString()){
       result = result.filter(meal => (meal.created_date > createdAfter))
     }
     if (limit != Number.MAX_VALUE) {
@@ -94,11 +96,14 @@ function unpackParams(request) {
 
 router.post("/", async (req, res) => {
   try {
-    const result = await knex("meal").insert([{ title: req.body.title, description: req.body.description, location: req.body.location, when: req.body.when, max_reservations: req.body.max_reservations, price: req.body.price, created_date: req.body.created_date }])
-    res.json(result);
+    const result = await knex("meal").insert({ title: req.body.title, description: req.body.description, location: req.body.location, when: req.body.when, max_reservations: req.body.max_reservations, price: req.body.price, created_date: req.body.created_date })
+    console.log(result);
+    res.json(result); 
+    
   } catch (error) {
     console.log(error);
-    throw error
+    // throw error
+    res.send(error)
   }
 });
 

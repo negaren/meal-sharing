@@ -1,0 +1,31 @@
+
+.navbar-container {
+    background-color: rgb(68, 69, 90);
+    width: 100%;
+    display: flex;
+    flex-flow: row-reverse;
+}
+
+.navbar {
+    background-color: rgb(68, 69, 90);
+    height: 20vh;
+    color: azure;
+    width: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar-links {
+    text-decoration: none;
+    color: azure;
+}
+
+a:hover {
+    color: rgb(216, 186, 14);
+}
+
+a {
+    text-decoration: none;
+}
